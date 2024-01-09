@@ -17,6 +17,9 @@
 		A04E4D3B2B4D346000F64770 /* TravelCity1CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E4D3A2B4D346000F64770 /* TravelCity1CollectionViewController.swift */; };
 		A04E4D3D2B4D36CA00F64770 /* TravelCity1CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E4D3C2B4D36CA00F64770 /* TravelCity1CollectionViewCell.swift */; };
 		A04E4D402B4D38C400F64770 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A04E4D3F2B4D38C400F64770 /* Kingfisher */; };
+		A04E4D432B4D512F00F64770 /* TravelCity2CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E4D422B4D512F00F64770 /* TravelCity2CollectionViewController.swift */; };
+		A04E4D462B4D517A00F64770 /* TravelCity2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E4D442B4D517A00F64770 /* TravelCity2CollectionViewCell.swift */; };
+		A04E4D472B4D517A00F64770 /* TravelCity2CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A04E4D452B4D517A00F64770 /* TravelCity2CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		A04E4D352B4D332600F64770 /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
 		A04E4D3A2B4D346000F64770 /* TravelCity1CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCity1CollectionViewController.swift; sourceTree = "<group>"; };
 		A04E4D3C2B4D36CA00F64770 /* TravelCity1CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCity1CollectionViewCell.swift; sourceTree = "<group>"; };
+		A04E4D422B4D512F00F64770 /* TravelCity2CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCity2CollectionViewController.swift; sourceTree = "<group>"; };
+		A04E4D442B4D517A00F64770 /* TravelCity2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCity2CollectionViewCell.swift; sourceTree = "<group>"; };
+		A04E4D452B4D517A00F64770 /* TravelCity2CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelCity2CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		A04E4D202B4D32CB00F64770 /* TravelCity */ = {
 			isa = PBXGroup;
 			children = (
+				A04E4D412B4D50EF00F64770 /* Step2 */,
 				A04E4D372B4D334700F64770 /* Step1 */,
 				A04E4D212B4D32CB00F64770 /* AppDelegate.swift */,
 				A04E4D232B4D32CB00F64770 /* SceneDelegate.swift */,
@@ -84,6 +91,16 @@
 				A04E4D3C2B4D36CA00F64770 /* TravelCity1CollectionViewCell.swift */,
 			);
 			path = Step1;
+			sourceTree = "<group>";
+		};
+		A04E4D412B4D50EF00F64770 /* Step2 */ = {
+			isa = PBXGroup;
+			children = (
+				A04E4D422B4D512F00F64770 /* TravelCity2CollectionViewController.swift */,
+				A04E4D442B4D517A00F64770 /* TravelCity2CollectionViewCell.swift */,
+				A04E4D452B4D517A00F64770 /* TravelCity2CollectionViewCell.xib */,
+			);
+			path = Step2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +169,7 @@
 			files = (
 				A04E4D2E2B4D32CC00F64770 /* LaunchScreen.storyboard in Resources */,
 				A04E4D2B2B4D32CC00F64770 /* Assets.xcassets in Resources */,
+				A04E4D472B4D517A00F64770 /* TravelCity2CollectionViewCell.xib in Resources */,
 				A04E4D292B4D32CB00F64770 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,7 +185,9 @@
 				A04E4D222B4D32CB00F64770 /* AppDelegate.swift in Sources */,
 				A04E4D3B2B4D346000F64770 /* TravelCity1CollectionViewController.swift in Sources */,
 				A04E4D362B4D332600F64770 /* CityInfo.swift in Sources */,
+				A04E4D432B4D512F00F64770 /* TravelCity2CollectionViewController.swift in Sources */,
 				A04E4D242B4D32CB00F64770 /* SceneDelegate.swift in Sources */,
+				A04E4D462B4D517A00F64770 /* TravelCity2CollectionViewCell.swift in Sources */,
 				A04E4D3D2B4D36CA00F64770 /* TravelCity1CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

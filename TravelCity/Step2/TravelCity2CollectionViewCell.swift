@@ -1,14 +1,14 @@
 //
-//  TravelCity1CollectionViewCell.swift
+//  TravelCity2CollectionViewCell.swift
 //  TravelCity
 //
 //  Created by 은서우 on 2024/01/09.
 //
 
 import UIKit
-import Kingfisher
 
-class TravelCity1CollectionViewCell: UICollectionViewCell {
+class TravelCity2CollectionViewCell: UICollectionViewCell {
+
     @IBOutlet var cityImageView: UIImageView!
     @IBOutlet var cityKorNameLabel: UILabel!
     @IBOutlet var cityEngNameLabel: UILabel!
@@ -16,7 +16,6 @@ class TravelCity1CollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         cityKorNameLabel.font = .boldSystemFont(ofSize: 17)
         cityEngNameLabel.font = .boldSystemFont(ofSize: 17)
         
