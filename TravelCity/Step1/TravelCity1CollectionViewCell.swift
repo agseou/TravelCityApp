@@ -17,22 +17,35 @@ class TravelCity1CollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        cityKorNameLabel.font = .boldSystemFont(ofSize: 16)
-        cityEngNameLabel.font = .boldSystemFont(ofSize: 16)
+        cityKorNameLabel.font = .boldSystemFont(ofSize: 17)
+        cityEngNameLabel.font = .boldSystemFont(ofSize: 17)
         
         // cityExplainLabel
         cityExplainLabel.numberOfLines = 0
         cityExplainLabel.textColor = .darkGray
         cityExplainLabel.textAlignment = .center
-        cityExplainLabel.font = .systemFont(ofSize: 14)
+        cityExplainLabel.font = .systemFont(ofSize: 13)
     }
+    
+    // drawing life cycle
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        let radius = cityImageView.frame.width/2
+        cityImageView.layer.cornerRadius = radius
+    }
+//    override func layoutIfNeeded() {
+//        //code
+//    }
     
     //cityImageView
     func setCityImageView(data: City){
         let url = URL(string: data.city_image)
         cityImageView.kf.setImage(with: url)
         cityImageView.contentMode = .scaleAspectFill
-        cityImageView.layer.cornerRadius = 80
+        
+        print(cityImageView.frame.width, cityImageView.frame.height)
+       
     }
     
 

@@ -82,7 +82,7 @@
                                             </constraints>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUv-2J-DTO">
-                                            <rect key="frame" x="5" y="175" width="120" height="52"/>
+                                            <rect key="frame" x="5" y="175" width="120" height="20.333333333333343"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -95,7 +95,7 @@
                                         <constraint firstItem="r5T-dK-5KX" firstAttribute="top" secondItem="ccD-qI-gxW" secondAttribute="top" id="Ntf-zt-3pp"/>
                                         <constraint firstItem="fUv-2J-DTO" firstAttribute="top" secondItem="P01-bL-3ab" secondAttribute="bottom" constant="10" id="OdF-cP-gcp"/>
                                         <constraint firstItem="fUv-2J-DTO" firstAttribute="leading" secondItem="ccD-qI-gxW" secondAttribute="leading" constant="5" id="RCv-fZ-ifI"/>
-                                        <constraint firstAttribute="bottom" secondItem="fUv-2J-DTO" secondAttribute="bottom" constant="5" id="WQO-IE-DaQ"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fUv-2J-DTO" secondAttribute="bottom" constant="5" id="WQO-IE-DaQ"/>
                                         <constraint firstAttribute="trailing" secondItem="r5T-dK-5KX" secondAttribute="trailing" id="YzH-hU-J1f"/>
                                         <constraint firstItem="r5T-dK-5KX" firstAttribute="leading" secondItem="ccD-qI-gxW" secondAttribute="leading" id="oY5-P2-IAk"/>
                                         <constraint firstItem="P01-bL-3ab" firstAttribute="top" secondItem="r5T-dK-5KX" secondAttribute="bottom" constant="10" id="xOc-y0-Gcv"/>
