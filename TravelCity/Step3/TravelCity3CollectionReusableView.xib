@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TravelCity3CollectionReusableView" id="U6b-Vx-4bR" customClass="TravelCity3CollectionReusableView" customModule="TravelCity" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="102"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인기 도시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABL-SW-Mef">
+                    <rect key="frame" x="145.66666666666666" y="15" width="64" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kma-zW-oy9">
+                    <rect key="frame" x="0.0" y="51" width="355" height="1"/>
+                    <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Lnk-0o-VWX"/>
+                    </constraints>
+                </view>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lhq-h9-YSf">
+                    <rect key="frame" x="20" y="62" width="315" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="pfA-wz-Z7R"/>
+                    </constraints>
+                    <segments>
+                        <segment title="모두"/>
+                        <segment title="국내"/>
+                        <segment title="해외"/>
+                    </segments>
+                </segmentedControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="Lhq-h9-YSf" firstAttribute="top" secondItem="Kma-zW-oy9" secondAttribute="bottom" constant="10" id="0RT-Pe-qt7"/>
+                <constraint firstItem="Lhq-h9-YSf" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="1Bc-UT-nTp"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="Kma-zW-oy9" secondAttribute="trailing" id="364-FO-fvf"/>
+                <constraint firstItem="Lhq-h9-YSf" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="20" id="48M-d4-cob"/>
+                <constraint firstItem="Kma-zW-oy9" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="4gR-Q8-H4h"/>
+                <constraint firstItem="Kma-zW-oy9" firstAttribute="top" secondItem="ABL-SW-Mef" secondAttribute="bottom" constant="15" id="Keq-Rp-sJw"/>
+                <constraint firstItem="ABL-SW-Mef" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="15" id="NwF-ft-HWK"/>
+                <constraint firstItem="ABL-SW-Mef" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="Y0O-uS-Xxa"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="Lhq-h9-YSf" secondAttribute="trailing" constant="20" id="naj-Y3-mos"/>
+            </constraints>
+            <connections>
+                <outlet property="cityFilterSegmentedControl" destination="Lhq-h9-YSf" id="rxD-bb-aqC"/>
+            </connections>
+            <point key="canvasLocation" x="70.992366412213741" y="29.577464788732396"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

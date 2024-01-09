@@ -6,6 +6,12 @@
 
 import Foundation
  
+enum Segment: Int {
+    case All
+    case Domestic
+    case Foreign
+}
+
 struct City {
     let city_name: String
     let city_english_name: String

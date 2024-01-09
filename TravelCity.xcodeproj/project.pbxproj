@@ -20,9 +20,10 @@
 		A04E4D432B4D512F00F64770 /* TravelCity2CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E4D422B4D512F00F64770 /* TravelCity2CollectionViewController.swift */; };
 		A04E4D462B4D517A00F64770 /* TravelCity2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E4D442B4D517A00F64770 /* TravelCity2CollectionViewCell.swift */; };
 		A04E4D472B4D517A00F64770 /* TravelCity2CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A04E4D452B4D517A00F64770 /* TravelCity2CollectionViewCell.xib */; };
-		A04E4D4A2B4D5B6A00F64770 /* TravleCity3CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E4D492B4D5B6A00F64770 /* TravleCity3CollectionViewController.swift */; };
 		A04E4D4D2B4D5B7B00F64770 /* TravelCity3CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E4D4B2B4D5B7B00F64770 /* TravelCity3CollectionViewCell.swift */; };
 		A04E4D4E2B4D5B7B00F64770 /* TravelCity3CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A04E4D4C2B4D5B7B00F64770 /* TravelCity3CollectionViewCell.xib */; };
+		A04E4D572B4D963400F64770 /* TravelCity3CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E4D552B4D963400F64770 /* TravelCity3CollectionReusableView.swift */; };
+		A04E4D582B4D963400F64770 /* TravelCity3CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A04E4D562B4D963400F64770 /* TravelCity3CollectionReusableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,9 +41,10 @@
 		A04E4D422B4D512F00F64770 /* TravelCity2CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCity2CollectionViewController.swift; sourceTree = "<group>"; };
 		A04E4D442B4D517A00F64770 /* TravelCity2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCity2CollectionViewCell.swift; sourceTree = "<group>"; };
 		A04E4D452B4D517A00F64770 /* TravelCity2CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelCity2CollectionViewCell.xib; sourceTree = "<group>"; };
-		A04E4D492B4D5B6A00F64770 /* TravleCity3CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravleCity3CollectionViewController.swift; sourceTree = "<group>"; };
 		A04E4D4B2B4D5B7B00F64770 /* TravelCity3CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCity3CollectionViewCell.swift; sourceTree = "<group>"; };
 		A04E4D4C2B4D5B7B00F64770 /* TravelCity3CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelCity3CollectionViewCell.xib; sourceTree = "<group>"; };
+		A04E4D552B4D963400F64770 /* TravelCity3CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCity3CollectionReusableView.swift; sourceTree = "<group>"; };
+		A04E4D562B4D963400F64770 /* TravelCity3CollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelCity3CollectionReusableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +115,10 @@
 			isa = PBXGroup;
 			children = (
 				A04E4D252B4D32CB00F64770 /* ViewController.swift */,
-				A04E4D492B4D5B6A00F64770 /* TravleCity3CollectionViewController.swift */,
 				A04E4D4B2B4D5B7B00F64770 /* TravelCity3CollectionViewCell.swift */,
 				A04E4D4C2B4D5B7B00F64770 /* TravelCity3CollectionViewCell.xib */,
+				A04E4D552B4D963400F64770 /* TravelCity3CollectionReusableView.swift */,
+				A04E4D562B4D963400F64770 /* TravelCity3CollectionReusableView.xib */,
 			);
 			path = Step3;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				A04E4D2E2B4D32CC00F64770 /* LaunchScreen.storyboard in Resources */,
 				A04E4D4E2B4D5B7B00F64770 /* TravelCity3CollectionViewCell.xib in Resources */,
+				A04E4D582B4D963400F64770 /* TravelCity3CollectionReusableView.xib in Resources */,
 				A04E4D2B2B4D32CC00F64770 /* Assets.xcassets in Resources */,
 				A04E4D472B4D517A00F64770 /* TravelCity2CollectionViewCell.xib in Resources */,
 				A04E4D292B4D32CB00F64770 /* Main.storyboard in Resources */,
@@ -199,12 +203,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A04E4D572B4D963400F64770 /* TravelCity3CollectionReusableView.swift in Sources */,
 				A04E4D262B4D32CB00F64770 /* ViewController.swift in Sources */,
 				A04E4D222B4D32CB00F64770 /* AppDelegate.swift in Sources */,
 				A04E4D3B2B4D346000F64770 /* TravelCity1CollectionViewController.swift in Sources */,
 				A04E4D362B4D332600F64770 /* CityInfo.swift in Sources */,
 				A04E4D432B4D512F00F64770 /* TravelCity2CollectionViewController.swift in Sources */,
-				A04E4D4A2B4D5B6A00F64770 /* TravleCity3CollectionViewController.swift in Sources */,
 				A04E4D242B4D32CB00F64770 /* SceneDelegate.swift in Sources */,
 				A04E4D462B4D517A00F64770 /* TravelCity2CollectionViewCell.swift in Sources */,
 				A04E4D3D2B4D36CA00F64770 /* TravelCity1CollectionViewCell.swift in Sources */,

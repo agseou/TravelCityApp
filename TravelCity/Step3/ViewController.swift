@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     let citylist = CityInfo()
     
@@ -26,7 +26,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TravelCity3CollectionReusableView", for: indexPath) as! TravelCity3CollectionReusableView
+        
+        return header
+    }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width, height: 120)
+    }
+    
     @IBOutlet var cityCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -34,6 +43,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         let xib = UINib(nibName: "TravelCity3CollectionViewCell", bundle: nil)
         cityCollectionView.register(xib, forCellWithReuseIdentifier: "TravelCity3CollectionViewCell")
+        let xib2 = UINib(nibName: "TravelCity3CollectionReusableView", bundle: nil)
+        cityCollectionView.register(xib2, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TravelCity3CollectionReusableView")
         
          cityCollectionView.dataSource = self
          cityCollectionView.delegate = self
@@ -49,10 +60,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         layout.minimumInteritemSpacing = 10
         cityCollectionView.collectionViewLayout = layout
         
-        
-        
     }
-
+    
+    
 
 }
 
