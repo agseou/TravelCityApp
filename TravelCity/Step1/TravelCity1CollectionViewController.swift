@@ -18,7 +18,7 @@ class TravelCity1CollectionViewController: UICollectionViewController {
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 20
         let cellWeight = (UIScreen.main.bounds.width - spacing * 3) / 2
-        let cellHeight = cellWeight + 100
+        let cellHeight = UIScreen.main.bounds.height/3
         layout.itemSize = CGSize(width: cellWeight, height: cellHeight)
         layout.sectionInset = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
         layout.minimumLineSpacing = 0
