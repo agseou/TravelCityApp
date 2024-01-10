@@ -5,11 +5,11 @@
 //
 
 import Foundation
- 
-enum Segment: Int {
+
+enum segState {
     case All
     case Domestic
-    case Foreign
+    case Forein
 }
 
 struct City {

@@ -13,12 +13,6 @@ class TravelCity3CollectionReusableView: UICollectionReusableView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    
-        
-    }
-    
-    func selectSegmentedControl(data: City){
-        
         
     }
     
