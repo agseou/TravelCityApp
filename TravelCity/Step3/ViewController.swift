@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     let citylist = CityInfo()
+    var IDX: Int = 0
     
     // CollectionView Setting
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -23,7 +24,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         cell.setCityImageView(data: item)
         cell.setCityLabel(data: item)
-                
+        
         return cell
     }
     
@@ -39,11 +40,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // UICollectionReusableView에서 SegmentControl의 인덱스를 불러오기
     @objc
-    func returnSegIdx(_ sender: UISegmentedControl){
+    func returnSegIdx(_ sender: UISegmentedControl) {
     
         let Idx = sender.selectedSegmentIndex
-        
         print(Idx)
+        
+        IDX = Idx
+        
     }
     
     
@@ -68,7 +71,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         cityCollectionView.dataSource = self
         cityCollectionView.delegate = self
         
-        
+        print("collect \(IDX)")
         
         //collectionCell의 Layout 사이즈 설정
         let layout = UICollectionViewFlowLayout()
