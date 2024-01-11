@@ -9,15 +9,18 @@ import UIKit
 
 class ADTableViewCell: UITableViewCell {
 
+    @IBOutlet var adBackgroudView: UIView!
+    @IBOutlet var adLabel: UILabel!
+    
+    static let identifier = "ADTableViewCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+        adBackgroudView.backgroundColor = UIColor(red: .random(in: 0...1),
+                                                  green: .random(in: 0...1),
+                                                  blue: .random(in: 0...1),
+                                                  alpha: .random(in: 0...1))
     }
     
 }

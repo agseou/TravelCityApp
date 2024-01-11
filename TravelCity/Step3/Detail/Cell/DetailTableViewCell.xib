@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,35 +17,92 @@
                 <rect key="frame" x="0.0" y="0.0" width="363" height="175"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="일본 철도의 역사를 둘러볼 수 있는 박물관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcg-cv-Pgd">
-                        <rect key="frame" x="13" y="52" width="210" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="EGG-T9-QuS">
+                        <rect key="frame" x="0.0" y="20" width="245" height="61"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="철도박물관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zht-Vs-I4u">
+                                <rect key="frame" x="0.0" y="0.0" width="73.666666666666671" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일본 철도의 역사를 둘러볼 수 있는 박물관" textAlignment="natural" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcg-cv-Pgd">
+                                <rect key="frame" x="0.0" y="20.333333333333339" width="245" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Rcg-cv-Pgd" firstAttribute="leading" secondItem="EGG-T9-QuS" secondAttribute="leading" id="CKS-jp-5CQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Rcg-cv-Pgd" secondAttribute="trailing" id="fFM-eJ-xwB"/>
+                        </constraints>
+                    </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tTd-D7-ddL">
                         <rect key="frame" x="255" y="17.666666666666671" width="108" height="140"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="tTd-D7-ddL" secondAttribute="height" multiplier="27:35" id="P5e-uc-IA6"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="철도박물관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zht-Vs-I4u">
-                        <rect key="frame" x="13" y="17" width="74" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YJ0-RU-Pdy">
+                        <rect key="frame" x="0.0" y="86" width="172.33333333333334" height="20"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOA-HO-EsW">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="20"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="uv8-GL-iMO"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저장 239" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlX-cQ-QQS">
+                                <rect key="frame" x="108" y="0.0" width="64.333333333333314" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="NOA-HO-EsW" firstAttribute="top" secondItem="YJ0-RU-Pdy" secondAttribute="top" id="0fL-Iv-p9G"/>
+                            <constraint firstItem="NOA-HO-EsW" firstAttribute="leading" secondItem="YJ0-RU-Pdy" secondAttribute="leading" id="OPR-El-gEA"/>
+                            <constraint firstAttribute="height" constant="20" id="UBN-HR-aTa"/>
+                            <constraint firstAttribute="bottom" secondItem="NOA-HO-EsW" secondAttribute="bottom" id="ZVr-Oa-MrE"/>
+                        </constraints>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtx-yg-xLH">
+                        <rect key="frame" x="332.33333333333331" y="25.666666666666671" width="20.666666666666686" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="" image="heart" catalog="system"/>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="tTd-D7-ddL" firstAttribute="top" secondItem="vtx-yg-xLH" secondAttribute="bottom" constant="-30" id="4YE-oO-Qey"/>
                     <constraint firstItem="tTd-D7-ddL" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="7fe-sD-5Fe"/>
                     <constraint firstAttribute="trailing" secondItem="tTd-D7-ddL" secondAttribute="trailing" id="8EB-D1-Idg"/>
                     <constraint firstItem="tTd-D7-ddL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="JOg-ds-wwY"/>
+                    <constraint firstItem="EGG-T9-QuS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="PIP-Js-srB"/>
+                    <constraint firstItem="YJ0-RU-Pdy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="UtG-TY-Yzi"/>
+                    <constraint firstItem="EGG-T9-QuS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="am3-VS-drD"/>
+                    <constraint firstAttribute="trailing" secondItem="vtx-yg-xLH" secondAttribute="trailing" constant="10" id="eFH-cT-DHu"/>
+                    <constraint firstItem="YJ0-RU-Pdy" firstAttribute="top" secondItem="EGG-T9-QuS" secondAttribute="bottom" constant="5" id="qNA-oP-XSg"/>
+                    <constraint firstItem="tTd-D7-ddL" firstAttribute="leading" secondItem="EGG-T9-QuS" secondAttribute="trailing" constant="10" id="tuA-Iw-soS"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="Rcg-cv-Pgd" id="5Bd-qj-hIl"/>
+                <outlet property="likeBtn" destination="vtx-yg-xLH" id="8k1-aL-5sW"/>
+                <outlet property="saveLabel" destination="jlX-cQ-QQS" id="Yce-7f-zlX"/>
+                <outlet property="titleLabel" destination="zht-Vs-I4u" id="fN8-I7-UqY"/>
+                <outlet property="travelImageView" destination="tTd-D7-ddL" id="nNy-nU-bWL"/>
+            </connections>
             <point key="canvasLocation" x="162.59541984732823" y="65.845070422535215"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

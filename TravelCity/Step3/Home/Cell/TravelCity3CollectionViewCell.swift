@@ -43,7 +43,6 @@ class TravelCity3CollectionViewCell: UICollectionViewCell {
         cityImageView.contentMode = .scaleAspectFill
         
         print(cityImageView.frame.width, cityImageView.frame.height)
-       
     }
     
 

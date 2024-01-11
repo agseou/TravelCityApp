@@ -19,14 +19,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // CollectionCell의 등록
         let xib = UINib(nibName: "TravelCity3CollectionViewCell", bundle: nil)
         cityCollectionView.register(xib, forCellWithReuseIdentifier: "TravelCity3CollectionViewCell")
+        // Headerl의 등록
         let xib2 = UINib(nibName: "TravelCity3CollectionReusableView", bundle: nil)
         cityCollectionView.register(xib2, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TravelCity3CollectionReusableView")
         
         cityCollectionView.dataSource = self
         cityCollectionView.delegate = self
         
+        // filterData를 citylist.city로 초기화
         filterData = citylist.city
         
         //collectionCell의 Layout 사이즈 설정
@@ -39,6 +42,9 @@ class ViewController: UIViewController {
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 10
         cityCollectionView.collectionViewLayout = layout
+        
+        
+        navigationItem.title = "인기 도시"
         
     }
 }
@@ -65,6 +71,17 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //1. 스토리보드 찾기
+        let sb = UIStoryboard(name: "Detail", bundle: nil)
+        //2. 뷰 컨트롤러 찾기
+        let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        //3. 뷰 컨트롤러 전환 : Push - Pop
+        navigationController?.pushViewController(vc, animated: true)
+
+    }
+    
 }
 
 
@@ -73,17 +90,17 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TravelCity3CollectionReusableView", for: indexPath) as! TravelCity3CollectionReusableView
         header.citySegControl.addTarget(self, action: #selector(returnSegIdx), for: .valueChanged)
-        // 인덱스를 프린트할 수 있다
-        // 인덱스를 collectionview에 넘겨주는 방법?
         
         return header
     }
  
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: 120)
+        return CGSize(width: UIScreen.main.bounds.width, height: 60)
     }
     
-    // UICollectionReusableView에서 SegmentControl의 인덱스를 불러오기
+    // 1. UICollectionReusableView에서 SegmentControl의 인덱스를 불러오기
+    // 2. 불러온 인텍스를 바탕으로 필터링한 값을 배열에 부여
     @objc
     func returnSegIdx(_ sender: UISegmentedControl) {
     
@@ -111,3 +128,4 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     }
     
 }
+
