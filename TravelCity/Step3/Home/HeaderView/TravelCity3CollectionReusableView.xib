@@ -51,7 +51,7 @@
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="Lhq-h9-YSf" secondAttribute="trailing" constant="20" id="naj-Y3-mos"/>
             </constraints>
             <connections>
-                <outlet property="cityFilterSegmentedControl" destination="Lhq-h9-YSf" id="rxD-bb-aqC"/>
+                <outlet property="citySegControl" destination="Lhq-h9-YSf" id="rxD-bb-aqC"/>
             </connections>
             <point key="canvasLocation" x="70.992366412213741" y="29.577464788732396"/>
         </collectionReusableView>

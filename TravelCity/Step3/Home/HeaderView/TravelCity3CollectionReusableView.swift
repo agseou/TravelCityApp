@@ -9,16 +9,10 @@ import UIKit
 
 class TravelCity3CollectionReusableView: UICollectionReusableView {
 
-    @IBOutlet var cityFilterSegmentedControl: UISegmentedControl!
+    @IBOutlet var citySegControl: UISegmentedControl!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
     }
     
 }

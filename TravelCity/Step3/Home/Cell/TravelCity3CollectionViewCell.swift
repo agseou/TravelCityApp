@@ -34,9 +34,7 @@ class TravelCity3CollectionViewCell: UICollectionViewCell {
         let radius = cityImageView.frame.width/2
         cityImageView.layer.cornerRadius = radius
     }
-//    override func layoutIfNeeded() {
-//        //code
-//    }
+
     
     //cityImageView
     func setCityImageView(data: City){

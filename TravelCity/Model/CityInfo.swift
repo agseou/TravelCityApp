@@ -6,11 +6,6 @@
 
 import Foundation
 
-enum segState {
-    case All
-    case Domestic
-    case Forein
-}
 
 struct City {
     let city_name: String
