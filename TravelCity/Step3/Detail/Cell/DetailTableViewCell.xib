@@ -45,17 +45,34 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YJ0-RU-Pdy">
-                        <rect key="frame" x="0.0" y="86" width="172.33333333333334" height="20"/>
+                        <rect key="frame" x="0.0" y="86" width="162.33333333333334" height="20"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOA-HO-EsW">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="20"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <rect key="frame" x="0.0" y="0.0" width="90" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★★★" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoX-fQ-JFt">
+                                        <rect key="frame" x="3" y="0.0" width="84.333333333333329" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fY-74-tsF">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="20"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="uv8-GL-iMO"/>
+                                    <constraint firstAttribute="bottom" secondItem="3fY-74-tsF" secondAttribute="bottom" id="05G-JX-F5s"/>
+                                    <constraint firstItem="hoX-fQ-JFt" firstAttribute="centerY" secondItem="NOA-HO-EsW" secondAttribute="centerY" id="0OQ-3f-u5k"/>
+                                    <constraint firstItem="3fY-74-tsF" firstAttribute="top" secondItem="NOA-HO-EsW" secondAttribute="top" id="JiT-t5-aY4"/>
+                                    <constraint firstItem="3fY-74-tsF" firstAttribute="leading" secondItem="NOA-HO-EsW" secondAttribute="leading" id="Yxe-Bj-Yd8"/>
+                                    <constraint firstItem="hoX-fQ-JFt" firstAttribute="centerX" secondItem="NOA-HO-EsW" secondAttribute="centerX" id="ktE-EV-Q6z"/>
+                                    <constraint firstItem="3fY-74-tsF" firstAttribute="centerX" secondItem="NOA-HO-EsW" secondAttribute="centerX" id="rIJ-yH-Dq1"/>
+                                    <constraint firstAttribute="width" constant="90" id="uv8-GL-iMO"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저장 239" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlX-cQ-QQS">
-                                <rect key="frame" x="108" y="0.0" width="64.333333333333314" height="20"/>
+                                <rect key="frame" x="98" y="0.0" width="64.333333333333314" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -93,8 +110,10 @@
                 <outlet property="descriptionLabel" destination="Rcg-cv-Pgd" id="5Bd-qj-hIl"/>
                 <outlet property="likeBtn" destination="vtx-yg-xLH" id="8k1-aL-5sW"/>
                 <outlet property="saveLabel" destination="jlX-cQ-QQS" id="Yce-7f-zlX"/>
+                <outlet property="starLabel" destination="hoX-fQ-JFt" id="ghL-ut-ON2"/>
                 <outlet property="titleLabel" destination="zht-Vs-I4u" id="fN8-I7-UqY"/>
                 <outlet property="travelImageView" destination="tTd-D7-ddL" id="nNy-nU-bWL"/>
+                <outlet property="yellowbar" destination="3fY-74-tsF" id="8W3-Ma-xaM"/>
             </connections>
             <point key="canvasLocation" x="162.59541984732823" y="65.845070422535215"/>
         </tableViewCell>

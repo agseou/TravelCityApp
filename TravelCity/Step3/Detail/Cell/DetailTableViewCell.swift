@@ -15,7 +15,12 @@ class DetailTableViewCell: UITableViewCell {
     @IBOutlet var travelImageView: UIImageView!
     @IBOutlet var likeBtn: UIButton!
     
+    @IBOutlet var yellowbar: UIView!
+    
+    @IBOutlet var starLabel: UILabel!
+    
     static let identifier = "DetailTableViewCell"
+ 
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +31,11 @@ class DetailTableViewCell: UITableViewCell {
         saveLabel.font = .systemFont(ofSize: 14, weight: .light)
         saveLabel.textColor = .gray
        
+        
+        yellowbar.mask = starLabel
+        yellowbar.clipsToBounds = true
+        //yellowbar.masksToBounds = true
+        
     }
     
 
@@ -36,7 +46,14 @@ class DetailTableViewCell: UITableViewCell {
         titleLabel.text = data.title
         descriptionLabel.text = data.description
         saveLabel.text = "저장 \(data.save ?? 0)"
-       
+        
+        let ratio: CGFloat = (data.grade ?? 0)/5
+        let width: CGFloat = yellowbar.frame.size.width * ratio
+        
+        print(ratio, width)
+        
+        yellowbar.frame.size.width = width
+        
     }
     
 
