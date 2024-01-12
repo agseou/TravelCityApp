@@ -62,12 +62,12 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="3fY-74-tsF" secondAttribute="bottom" id="05G-JX-F5s"/>
                                     <constraint firstItem="hoX-fQ-JFt" firstAttribute="centerY" secondItem="NOA-HO-EsW" secondAttribute="centerY" id="0OQ-3f-u5k"/>
-                                    <constraint firstItem="3fY-74-tsF" firstAttribute="top" secondItem="NOA-HO-EsW" secondAttribute="top" id="JiT-t5-aY4"/>
-                                    <constraint firstItem="3fY-74-tsF" firstAttribute="leading" secondItem="NOA-HO-EsW" secondAttribute="leading" id="Yxe-Bj-Yd8"/>
+                                    <constraint firstItem="3fY-74-tsF" firstAttribute="top" secondItem="NOA-HO-EsW" secondAttribute="top" id="4KZ-1I-80v"/>
+                                    <constraint firstAttribute="bottom" secondItem="3fY-74-tsF" secondAttribute="bottom" id="B2t-MP-l6v"/>
+                                    <constraint firstItem="3fY-74-tsF" firstAttribute="width" secondItem="NOA-HO-EsW" secondAttribute="width" id="ThQ-98-6VB"/>
+                                    <constraint firstItem="3fY-74-tsF" firstAttribute="leading" secondItem="NOA-HO-EsW" secondAttribute="leading" id="fme-Sh-QGU"/>
                                     <constraint firstItem="hoX-fQ-JFt" firstAttribute="centerX" secondItem="NOA-HO-EsW" secondAttribute="centerX" id="ktE-EV-Q6z"/>
-                                    <constraint firstItem="3fY-74-tsF" firstAttribute="centerX" secondItem="NOA-HO-EsW" secondAttribute="centerX" id="rIJ-yH-Dq1"/>
                                     <constraint firstAttribute="width" constant="90" id="uv8-GL-iMO"/>
                                 </constraints>
                             </view>

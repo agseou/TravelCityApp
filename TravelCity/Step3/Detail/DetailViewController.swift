@@ -39,7 +39,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row.isMultiple(of: 5) { //2의 배수일때!
+        if indexPath.row.isMultiple(of: 4) && indexPath.row != 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier:  ADTableViewCell.identifier, for: indexPath) as! ADTableViewCell
             
              return cell
@@ -57,7 +57,11 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 175
+        if indexPath.row.isMultiple(of: 4) && indexPath.row != 0 {
+            return 100
+        }else {
+                return 170
+            }
     }
     
     
