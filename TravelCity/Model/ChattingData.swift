@@ -44,6 +44,15 @@ struct Chat {
         
         return dateFormmater.string(from: convertedDate!)
     }
+    
+    var covertedTime: String {
+        let dateFormmater = DateFormatter()
+        dateFormmater.dateFormat = "yyyy-MM-dd HH:mm"
+        let convertedDate = dateFormmater.date(from: date)
+        dateFormmater.dateFormat = "HH:mm a"
+        
+        return dateFormmater.string(from: convertedDate!)
+    }
 }
 
 

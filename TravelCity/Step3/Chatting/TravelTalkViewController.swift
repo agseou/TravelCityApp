@@ -19,10 +19,16 @@ class TravelTalkViewController: UIViewController {
         let xib = UINib(nibName: TravelTalkTableViewCell.identifier, bundle: nil)
         travelTalkTableView.register(xib, forCellReuseIdentifier: TravelTalkTableViewCell.identifier)
         
+        
         travelTalkTableView.delegate = self
         travelTalkTableView.dataSource = self
    
         travelTalkTableView.separatorStyle = .none
+        
+        travelTalkTableView.rowHeight = UITableView.automaticDimension
+        navigationItem.backButtonTitle = ""
+        navigationItem.backButtonDisplayMode = .default
+        navigationItem.backBarButtonItem?.tintColor = .black
     }
     
 
@@ -44,8 +50,19 @@ extension TravelTalkViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //1. 스토리보드 찾기
+        let sb = UIStoryboard(name: "Chatting", bundle: nil)
+        //2. 뷰 컨트롤러 찾기
+        let vc = sb.instantiateViewController(withIdentifier: ChattingViewController.identifier) as! ChattingViewController
+        
+        //3. 데이터 넘기기
+        vc.chattings = chatList[indexPath.row]
+        
+        //4. 뷰 컨트롤러 전환 : Push - Pop
+        navigationController?.pushViewController(vc, animated: true)
+        
+        tableView.reloadRows(at: [indexPath], with: .fade)
     }
     
     

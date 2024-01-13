@@ -20,6 +20,7 @@ class TravelTalkTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         chatRoomImage.backgroundColor = .white
+        chatRoomImage.contentMode = .scaleAspectFit
     
         chatRoomNameLabel.font = .boldSystemFont(ofSize: 14)
         
