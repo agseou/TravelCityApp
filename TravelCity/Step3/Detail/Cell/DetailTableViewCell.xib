@@ -59,13 +59,15 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fY-74-tsF">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="20"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="1pS-QU-uM6"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="hoX-fQ-JFt" firstAttribute="centerY" secondItem="NOA-HO-EsW" secondAttribute="centerY" id="0OQ-3f-u5k"/>
                                     <constraint firstItem="3fY-74-tsF" firstAttribute="top" secondItem="NOA-HO-EsW" secondAttribute="top" id="4KZ-1I-80v"/>
                                     <constraint firstAttribute="bottom" secondItem="3fY-74-tsF" secondAttribute="bottom" id="B2t-MP-l6v"/>
-                                    <constraint firstItem="3fY-74-tsF" firstAttribute="width" secondItem="NOA-HO-EsW" secondAttribute="width" id="ThQ-98-6VB"/>
                                     <constraint firstItem="3fY-74-tsF" firstAttribute="leading" secondItem="NOA-HO-EsW" secondAttribute="leading" id="fme-Sh-QGU"/>
                                     <constraint firstItem="hoX-fQ-JFt" firstAttribute="centerX" secondItem="NOA-HO-EsW" secondAttribute="centerX" id="ktE-EV-Q6z"/>
                                     <constraint firstAttribute="width" constant="90" id="uv8-GL-iMO"/>
@@ -111,9 +113,11 @@
                 <outlet property="likeBtn" destination="vtx-yg-xLH" id="8k1-aL-5sW"/>
                 <outlet property="saveLabel" destination="jlX-cQ-QQS" id="Yce-7f-zlX"/>
                 <outlet property="starLabel" destination="hoX-fQ-JFt" id="ghL-ut-ON2"/>
+                <outlet property="starView" destination="NOA-HO-EsW" id="Ssp-el-zLx"/>
                 <outlet property="titleLabel" destination="zht-Vs-I4u" id="fN8-I7-UqY"/>
                 <outlet property="travelImageView" destination="tTd-D7-ddL" id="nNy-nU-bWL"/>
                 <outlet property="yellowbar" destination="3fY-74-tsF" id="8W3-Ma-xaM"/>
+                <outlet property="yellowbarWidth" destination="1pS-QU-uM6" id="SsH-tO-RiY"/>
             </connections>
             <point key="canvasLocation" x="162.59541984732823" y="65.845070422535215"/>
         </tableViewCell>

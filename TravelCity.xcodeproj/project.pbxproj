@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A019AA6E2B524189008B65B6 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A019AA6D2B524189008B65B6 /* Date+Extension.swift */; };
 		A02E53F42B4FD26D002AA832 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A02E53F32B4FD26D002AA832 /* Detail.storyboard */; };
 		A02E53F62B4FD2E7002AA832 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02E53F52B4FD2E7002AA832 /* DetailViewController.swift */; };
 		A02E53FA2B4FD3B1002AA832 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02E53F82B4FD3B1002AA832 /* DetailTableViewCell.swift */; };
@@ -31,9 +32,17 @@
 		A04E4D4E2B4D5B7B00F64770 /* TravelCity3CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A04E4D4C2B4D5B7B00F64770 /* TravelCity3CollectionViewCell.xib */; };
 		A04E4D572B4D963400F64770 /* TravelCity3CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E4D552B4D963400F64770 /* TravelCity3CollectionReusableView.swift */; };
 		A04E4D582B4D963400F64770 /* TravelCity3CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A04E4D562B4D963400F64770 /* TravelCity3CollectionReusableView.xib */; };
+		A07C7D2B2B512658002FDDA2 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C7D2A2B512658002FDDA2 /* ChattingViewController.swift */; };
+		A07C7D2D2B512660002FDDA2 /* Chatting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07C7D2C2B512660002FDDA2 /* Chatting.storyboard */; };
+		A07C7D2F2B51267E002FDDA2 /* ChattingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C7D2E2B51267E002FDDA2 /* ChattingData.swift */; };
+		A07C7D352B51276E002FDDA2 /* TravelTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C7D342B51276E002FDDA2 /* TravelTalkViewController.swift */; };
+		A07C7D392B512B65002FDDA2 /* TravelTalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C7D372B512B65002FDDA2 /* TravelTalkTableViewCell.swift */; };
+		A07C7D3A2B512B65002FDDA2 /* TravelTalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A07C7D382B512B65002FDDA2 /* TravelTalkTableViewCell.xib */; };
+		A07C7D3C2B512C78002FDDA2 /* TravelTalk.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07C7D3B2B512C78002FDDA2 /* TravelTalk.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A019AA6D2B524189008B65B6 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		A02E53F32B4FD26D002AA832 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		A02E53F52B4FD2E7002AA832 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A02E53F82B4FD3B1002AA832 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -59,6 +68,13 @@
 		A04E4D4C2B4D5B7B00F64770 /* TravelCity3CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelCity3CollectionViewCell.xib; sourceTree = "<group>"; };
 		A04E4D552B4D963400F64770 /* TravelCity3CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCity3CollectionReusableView.swift; sourceTree = "<group>"; };
 		A04E4D562B4D963400F64770 /* TravelCity3CollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelCity3CollectionReusableView.xib; sourceTree = "<group>"; };
+		A07C7D2A2B512658002FDDA2 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
+		A07C7D2C2B512660002FDDA2 /* Chatting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chatting.storyboard; sourceTree = "<group>"; };
+		A07C7D2E2B51267E002FDDA2 /* ChattingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChattingData.swift; sourceTree = "<group>"; };
+		A07C7D342B51276E002FDDA2 /* TravelTalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTalkViewController.swift; sourceTree = "<group>"; };
+		A07C7D372B512B65002FDDA2 /* TravelTalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTalkTableViewCell.swift; sourceTree = "<group>"; };
+		A07C7D382B512B65002FDDA2 /* TravelTalkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelTalkTableViewCell.xib; sourceTree = "<group>"; };
+		A07C7D3B2B512C78002FDDA2 /* TravelTalk.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelTalk.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A019AA6C2B52417C008B65B6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A019AA6D2B524189008B65B6 /* Date+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		A02E53F22B4FD25B002AA832 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +133,7 @@
 			children = (
 				A04E4D352B4D332600F64770 /* CityInfo.swift */,
 				A02E54022B4FD616002AA832 /* TravelModel.swift */,
+				A07C7D2E2B51267E002FDDA2 /* ChattingData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +175,7 @@
 		A04E4D202B4D32CB00F64770 /* TravelCity */ = {
 			isa = PBXGroup;
 			children = (
+				A019AA6C2B52417C008B65B6 /* Extension */,
 				A02E54012B4FD607002AA832 /* Model */,
 				A04E4D482B4D59E800F64770 /* Step3 */,
 				A04E4D412B4D50EF00F64770 /* Step2 */,
@@ -186,10 +212,32 @@
 		A04E4D482B4D59E800F64770 /* Step3 */ = {
 			isa = PBXGroup;
 			children = (
+				A07C7D292B51264A002FDDA2 /* Chatting */,
 				A02E54002B4FD4F2002AA832 /* Home */,
 				A02E53F22B4FD25B002AA832 /* Detail */,
 			);
 			path = Step3;
+			sourceTree = "<group>";
+		};
+		A07C7D292B51264A002FDDA2 /* Chatting */ = {
+			isa = PBXGroup;
+			children = (
+				A07C7D362B51277A002FDDA2 /* Cell */,
+				A07C7D2A2B512658002FDDA2 /* ChattingViewController.swift */,
+				A07C7D2C2B512660002FDDA2 /* Chatting.storyboard */,
+				A07C7D3B2B512C78002FDDA2 /* TravelTalk.storyboard */,
+				A07C7D342B51276E002FDDA2 /* TravelTalkViewController.swift */,
+			);
+			path = Chatting;
+			sourceTree = "<group>";
+		};
+		A07C7D362B51277A002FDDA2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A07C7D372B512B65002FDDA2 /* TravelTalkTableViewCell.swift */,
+				A07C7D382B512B65002FDDA2 /* TravelTalkTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,9 +308,12 @@
 				A04E4D2E2B4D32CC00F64770 /* LaunchScreen.storyboard in Resources */,
 				A04E4D4E2B4D5B7B00F64770 /* TravelCity3CollectionViewCell.xib in Resources */,
 				A04E4D582B4D963400F64770 /* TravelCity3CollectionReusableView.xib in Resources */,
+				A07C7D2D2B512660002FDDA2 /* Chatting.storyboard in Resources */,
 				A04E4D2B2B4D32CC00F64770 /* Assets.xcassets in Resources */,
+				A07C7D3C2B512C78002FDDA2 /* TravelTalk.storyboard in Resources */,
 				A02E53F42B4FD26D002AA832 /* Detail.storyboard in Resources */,
 				A04E4D472B4D517A00F64770 /* TravelCity2CollectionViewCell.xib in Resources */,
+				A07C7D3A2B512B65002FDDA2 /* TravelTalkTableViewCell.xib in Resources */,
 				A02E53FB2B4FD3B1002AA832 /* DetailTableViewCell.xib in Resources */,
 				A04E4D292B4D32CB00F64770 /* Main.storyboard in Resources */,
 			);
@@ -281,14 +332,19 @@
 				A02E53FE2B4FD473002AA832 /* ADTableViewCell.swift in Sources */,
 				A04E4D222B4D32CB00F64770 /* AppDelegate.swift in Sources */,
 				A04E4D3B2B4D346000F64770 /* TravelCity1CollectionViewController.swift in Sources */,
+				A07C7D2B2B512658002FDDA2 /* ChattingViewController.swift in Sources */,
+				A07C7D352B51276E002FDDA2 /* TravelTalkViewController.swift in Sources */,
 				A04E4D362B4D332600F64770 /* CityInfo.swift in Sources */,
 				A02E54032B4FD616002AA832 /* TravelModel.swift in Sources */,
+				A07C7D2F2B51267E002FDDA2 /* ChattingData.swift in Sources */,
 				A02E53FA2B4FD3B1002AA832 /* DetailTableViewCell.swift in Sources */,
 				A04E4D432B4D512F00F64770 /* TravelCity2CollectionViewController.swift in Sources */,
 				A04E4D242B4D32CB00F64770 /* SceneDelegate.swift in Sources */,
 				A04E4D462B4D517A00F64770 /* TravelCity2CollectionViewCell.swift in Sources */,
 				A04E4D3D2B4D36CA00F64770 /* TravelCity1CollectionViewCell.swift in Sources */,
 				A04E4D4D2B4D5B7B00F64770 /* TravelCity3CollectionViewCell.swift in Sources */,
+				A019AA6E2B524189008B65B6 /* Date+Extension.swift in Sources */,
+				A07C7D392B512B65002FDDA2 /* TravelTalkTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,9 @@ class ADTableViewCell: UITableViewCell {
     
     static let identifier = "ADTableViewCell"
     
+    let list: [String] = ["하와이 여행을 가고 싶다면?\n수업이 있는데 가실 생각은 아니시죠?","도쿄 여행 예약은?\n XCode로 직접 예약앱을 만들면 되겠네요!"]
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -21,6 +24,9 @@ class ADTableViewCell: UITableViewCell {
                                                   green: .random(in: 0...1),
                                                   blue: .random(in: 0...1),
                                                   alpha: .random(in: 0...1))
+        
+        adBackgroudView.layer.cornerRadius = 10
+        adLabel.text = list.randomElement()
     }
     
 }

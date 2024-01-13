@@ -9,12 +9,16 @@ import UIKit
 
 class DetailTableViewCell: UITableViewCell {
     
+    @IBOutlet var yellowbarWidth: NSLayoutConstraint!
+    
+    
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var saveLabel: UILabel!
     @IBOutlet var travelImageView: UIImageView!
     @IBOutlet var likeBtn: UIButton!
     
+    @IBOutlet var starView: UIView!
     @IBOutlet var yellowbar: UIView!
     
     @IBOutlet var starLabel: UILabel!
@@ -52,8 +56,16 @@ class DetailTableViewCell: UITableViewCell {
         
         print(ratio, width)
         
-        yellowbar.frame.size.width = width
+        starView.addSubview(yellowbar)
         
+        //yellowbar.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.init(item: yellowbar!,
+                                attribute: .width,
+                                relatedBy: .equal,
+                                toItem: starView,
+                                attribute: .width,
+                                multiplier: 1.0,
+                                constant: width).isActive = true
     }
     
 

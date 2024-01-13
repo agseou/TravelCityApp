@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="109" id="PjV-pT-FjJ" customClass="TravelTalkTableViewCell" customModule="TravelCity" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="109"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PjV-pT-FjJ" id="kHZ-5q-xz9">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="109"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H4C-Ee-6FW">
+                        <rect key="frame" x="15" y="10" width="89" height="89"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="H4C-Ee-6FW" secondAttribute="height" multiplier="1:1" id="uVb-9T-8SF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ct7-YY-mir">
+                        <rect key="frame" x="114" y="15" width="31" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24.01.12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qz2-u6-VpI">
+                        <rect key="frame" x="315" y="15" width="63" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="왜요? 요즘 코딩이 대세인데" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fN7-LE-gb7">
+                        <rect key="frame" x="114" y="46" width="184" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Qz2-u6-VpI" secondAttribute="trailing" constant="15" id="4d6-2U-tD8"/>
+                    <constraint firstItem="Ct7-YY-mir" firstAttribute="leading" secondItem="H4C-Ee-6FW" secondAttribute="trailing" constant="10" id="7Wb-9O-H6Z"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fN7-LE-gb7" secondAttribute="bottom" constant="15" id="DPD-Sf-DYP"/>
+                    <constraint firstItem="H4C-Ee-6FW" firstAttribute="top" secondItem="kHZ-5q-xz9" secondAttribute="top" constant="10" id="Llx-J0-e7C"/>
+                    <constraint firstAttribute="bottom" secondItem="H4C-Ee-6FW" secondAttribute="bottom" constant="10" id="SO0-Ag-IdU"/>
+                    <constraint firstItem="Qz2-u6-VpI" firstAttribute="top" secondItem="kHZ-5q-xz9" secondAttribute="top" constant="15" id="UgK-ic-e52"/>
+                    <constraint firstItem="H4C-Ee-6FW" firstAttribute="centerY" secondItem="kHZ-5q-xz9" secondAttribute="centerY" id="bYq-2k-DpY"/>
+                    <constraint firstItem="fN7-LE-gb7" firstAttribute="leading" secondItem="Ct7-YY-mir" secondAttribute="leading" id="k6B-Uf-9Gz"/>
+                    <constraint firstItem="fN7-LE-gb7" firstAttribute="top" secondItem="Ct7-YY-mir" secondAttribute="bottom" constant="10" id="pQ3-7h-QXc"/>
+                    <constraint firstItem="Ct7-YY-mir" firstAttribute="top" secondItem="kHZ-5q-xz9" secondAttribute="top" constant="15" id="ru8-aK-vOp"/>
+                    <constraint firstItem="H4C-Ee-6FW" firstAttribute="leading" secondItem="kHZ-5q-xz9" secondAttribute="leading" constant="15" id="xvF-5g-P7d"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="GWW-x8-x2x"/>
+            <connections>
+                <outlet property="chatRoomDateLabel" destination="Qz2-u6-VpI" id="8Tl-Xz-Xjs"/>
+                <outlet property="chatRoomImage" destination="H4C-Ee-6FW" id="jtw-YE-M3J"/>
+                <outlet property="chatRoomLastMessageLabel" destination="fN7-LE-gb7" id="pUV-cW-MLz"/>
+                <outlet property="chatRoomNameLabel" destination="Ct7-YY-mir" id="YP6-5p-sD1"/>
+            </connections>
+            <point key="canvasLocation" x="188.54961832061068" y="42.605633802816904"/>
+        </tableViewCell>
+    </objects>
+</document>
