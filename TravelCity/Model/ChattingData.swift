@@ -96,7 +96,7 @@ let mockChatList: [ChatRoom] = [
                      message: "화이팅 ^^"),
              ]),
     ChatRoom(chatroomId: 3,
-             chatroomImage: [User.hue.profileImage],
+             chatroomImage: [User.jack.profileImage],
              chatroomName: User.jack.rawValue,
              chatList: [
                 Chat(user: .jack,

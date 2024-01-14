@@ -19,18 +19,25 @@ class ChattingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // xib -> register
         let xib = UINib(nibName: OtherChattingTableViewCell.identifier, bundle: nil)
         let xib2 = UINib(nibName: MyChattingTableViewCell.identifier, bundle: nil)
         chattingTableView.register(xib, forCellReuseIdentifier: OtherChattingTableViewCell.identifier)
         chattingTableView.register(xib2, forCellReuseIdentifier: MyChattingTableViewCell.identifier)
         
-        
+        // delegate와 dataSource 등록
         chattingTableView.delegate = self
         chattingTableView.dataSource = self
         chattingTableView.separatorStyle = .none
         
+        //automatic Dimension
         chattingTableView.rowHeight = UITableView.automaticDimension
         
+        // 채팅 가장 마지막으로 내기리
+        let index = IndexPath(row: chattings.chatList.count-1, section: 0)
+        chattingTableView.scrollToRow(at: index, at: .bottom, animated: true)
+        
+        // navigation title 부여
         navigationItem.title = chattings.chatroomName
         
     }
@@ -39,10 +46,17 @@ class ChattingViewController: UIViewController {
 }
 
 extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
+    
+//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        <#code#>
+//    }
+    
+    // 행의 수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return chattings.chatList.count
     }
     
+    // 행의 컨텐츠
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if chattings.chatList[indexPath.row].user == .user{
@@ -63,8 +77,5 @@ extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
     }
-    
-    
-    
-    
+ 
 }

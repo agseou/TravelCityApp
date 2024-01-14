@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Travel Talk View Controller-->
+        <!--Travle Talk-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="TravelTalkViewController" customModule="TravelCity" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,6 +19,38 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qEx-VP-SGQ">
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" restorationIdentifier="searchBar" id="RdZ-j9-C3d">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="54"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="Fme-AN-52p">
+                                            <rect key="frame" x="10" y="0.0" width="373" height="44"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="Y6W-OH-hqX" id="bts-HI-iKT"/>
+                                            </connections>
+                                        </searchBar>
+                                        <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vbc-KI-s8k">
+                                            <rect key="frame" x="0.0" y="53" width="393" height="1"/>
+                                            <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <color key="tintColor" systemColor="systemGrayColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="ovS-bf-sq1"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Vbc-KI-s8k" secondAttribute="trailing" id="AXo-HD-LGE"/>
+                                        <constraint firstAttribute="trailing" secondItem="Fme-AN-52p" secondAttribute="trailing" constant="10" id="I21-SU-uh0"/>
+                                        <constraint firstAttribute="bottom" secondItem="Fme-AN-52p" secondAttribute="bottom" constant="10" id="SfH-KC-1cj"/>
+                                        <constraint firstItem="Fme-AN-52p" firstAttribute="leading" secondItem="RdZ-j9-C3d" secondAttribute="leading" constant="10" id="b1n-xg-PdL"/>
+                                        <constraint firstItem="Vbc-KI-s8k" firstAttribute="centerX" secondItem="RdZ-j9-C3d" secondAttribute="centerX" id="k4h-jc-sx5"/>
+                                        <constraint firstAttribute="bottom" secondItem="Vbc-KI-s8k" secondAttribute="bottom" id="n17-Zn-Lw9"/>
+                                        <constraint firstItem="Fme-AN-52p" firstAttribute="top" secondItem="RdZ-j9-C3d" secondAttribute="top" id="td3-Py-3ov"/>
+                                        <constraint firstItem="Vbc-KI-s8k" firstAttribute="leading" secondItem="RdZ-j9-C3d" secondAttribute="leading" id="wnC-Yf-IDp"/>
+                                    </constraints>
+                                </view>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -30,8 +62,9 @@
                             <constraint firstItem="qEx-VP-SGQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="f70-rt-mBO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="x7C-p0-6Uk"/>
+                    <navigationItem key="navigationItem" title="Travle Talk" id="x7C-p0-6Uk"/>
                     <connections>
+                        <outlet property="searchBar" destination="Fme-AN-52p" id="0y6-DX-wt2"/>
                         <outlet property="travelTalkTableView" destination="qEx-VP-SGQ" id="b4P-dA-c1q"/>
                     </connections>
                 </viewController>
@@ -61,6 +94,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
