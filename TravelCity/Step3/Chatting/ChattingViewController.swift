@@ -13,6 +13,9 @@ class ChattingViewController: UIViewController {
     
     var chattings: ChatRoom = ChatRoom(chatroomId: 1, chatroomImage: [User.hue.profileImage], chatroomName: "도봉 멘토방")
     
+    @IBOutlet var footerView: UIView!
+    @IBOutlet var chatTextField: UITextView!
+    @IBOutlet var chatTextFieldBackView: UIView!
     @IBOutlet var chattingTableView: UITableView!
     
     
@@ -40,16 +43,16 @@ class ChattingViewController: UIViewController {
         // navigation title 부여
         navigationItem.title = chattings.chatroomName
         
+        chatTextFieldBackView.backgroundColor = .systemGray6
+        chatTextFieldBackView.layer.cornerRadius = 10
+        chatTextField.text = "채팅을 입력하세요"
+        chatTextField.backgroundColor = .clear
     }
     
 
 }
 
 extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
-    
-//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        <#code#>
-//    }
     
     // 행의 수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
