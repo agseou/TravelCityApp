@@ -31,6 +31,7 @@ class ChattingViewController: UIViewController {
         // delegate와 dataSource 등록
         chattingTableView.delegate = self
         chattingTableView.dataSource = self
+        chatTextField.delegate = self
         chattingTableView.separatorStyle = .none
         
         //automatic Dimension
@@ -45,11 +46,40 @@ class ChattingViewController: UIViewController {
         
         chatTextFieldBackView.backgroundColor = .systemGray6
         chatTextFieldBackView.layer.cornerRadius = 10
-        chatTextField.text = "채팅을 입력하세요"
+        chatTextField.textColor = .gray
         chatTextField.backgroundColor = .clear
+        chatTextField.text = "메세지를 입력하세요"
+        
     }
     
+    @IBAction func tapSendBtn(_ sender: UIButton) {
+        
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let formattedDate = dateFormatter.string(from: date)
+ 
+        
+        chattings.chatList.append(Chat(user: .user, date: formattedDate, message: chatTextField.text))
+        chattingTableView.reloadData()
+        chatTextField.textColor = .gray
+        chatTextField.text = "메세지를 입력하세요"
+        
+        let index = IndexPath(row: chattings.chatList.count-1, section: 0)
+        chattingTableView.scrollToRow(at: index, at: .bottom, animated: true)
+    }
+    
+}
 
+extension ChattingViewController: UITextViewDelegate {
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == "메세지를 입력하세요" {
+            textView.textColor = .black
+            chatTextField.text = nil
+        }
+    }
+    
 }
 
 extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
