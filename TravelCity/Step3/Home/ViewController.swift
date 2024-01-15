@@ -9,8 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let citylist = CityInfo()
-    var filterData: [City] = []
+    let originalList = CityInfo.city
+    var citylist: [City] = CityInfo.city {
+        didSet { //변경된 직후 -> 프로퍼티 옵저버.
+            cityCollectionView.reloadData()
+        }
+    }
+    @IBOutlet var searchBar: UISearchBar!
     
     // OUTLET
     @IBOutlet var cityCollectionView: UICollectionView!
@@ -29,8 +34,6 @@ class ViewController: UIViewController {
         cityCollectionView.dataSource = self
         cityCollectionView.delegate = self
         
-        // filterData를 citylist.city로 초기화
-        filterData = citylist.city
         
         //collectionCell의 Layout 사이즈 설정
         let layout = UICollectionViewFlowLayout()
@@ -46,23 +49,60 @@ class ViewController: UIViewController {
         
         navigationItem.title = "인기 도시"
         
+        
+        //searchBar
+        searchBar.searchBarStyle = .minimal
+        
     }
 }
 
 
 // MARK: - Extension
-
+extension ViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        var filterData: [City] = []
+        
+        if searchBar.text == "" {
+            citylist = originalList
+        } else {
+            for item in originalList {
+                if item.city_english_name.contains(searchBar.text!) || item.city_name.contains(searchBar.text!) || item.city_explain.contains(searchBar.text!) {
+                    filterData.append(item)
+                }
+            }
+            citylist = filterData
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        var filterData: [City] = []
+        
+        if searchBar.text == "" {
+            citylist = originalList
+        } else {
+            for item in originalList {
+                if item.city_english_name.contains(searchBar.text!) || item.city_name.contains(searchBar.text!) || item.city_explain.contains(searchBar.text!) {
+                    filterData.append(item)
+                }
+            }
+            citylist = filterData
+        }
+    }
+}
+                                
+                                
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return filterData.count
+        return citylist.count
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TravelCity3CollectionViewCell", for: indexPath) as! TravelCity3CollectionViewCell
         
-        let item = filterData[indexPath.item]
+        let item = citylist[indexPath.item]
         
         cell.setCityImageView(data: item)
         cell.setCityLabel(data: item)
@@ -109,18 +149,18 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         print(selectedIDX)
         
         switch selectedIDX {
-        case 0: filterData = citylist.city
+        case 0: citylist = originalList
             
-        case 1: filterData = citylist.city.filter({ City in
+        case 1: citylist = originalList.filter({ City in
             return City.domestic_travel
         })
             
-        case 2: filterData = citylist.city.filter({ City in
+        case 2: citylist = originalList.filter({ City in
             return !City.domestic_travel
         })
             
         default:
-            filterData = citylist.city
+            citylist = originalList
             break
         }
         

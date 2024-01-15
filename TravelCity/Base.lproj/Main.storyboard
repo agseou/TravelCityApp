@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AJm-0N-WdW">
-                                <rect key="frame" x="0.0" y="44" width="393" height="808"/>
+                                <rect key="frame" x="0.0" y="153" width="393" height="699"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YgA-aP-xaN">
                                     <size key="itemSize" width="128" height="128"/>
@@ -41,19 +41,31 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="BuK-L2-eiY">
+                                <rect key="frame" x="10" y="103" width="373" height="50"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nnY-GL-Qd5"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="AJm-0N-WdW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-59" id="AZb-Ww-gj5"/>
+                            <constraint firstItem="AJm-0N-WdW" firstAttribute="top" secondItem="BuK-L2-eiY" secondAttribute="bottom" id="8KT-8t-B1r"/>
+                            <constraint firstItem="AJm-0N-WdW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="AZb-Ww-gj5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AJm-0N-WdW" secondAttribute="trailing" id="OTl-81-ZyR"/>
+                            <constraint firstItem="BuK-L2-eiY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="T6E-oo-UNe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AJm-0N-WdW" secondAttribute="bottom" constant="-34" id="UkU-Up-Ig1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BuK-L2-eiY" secondAttribute="trailing" constant="10" id="gSB-eb-dtD"/>
                             <constraint firstItem="AJm-0N-WdW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iuV-gH-EeG"/>
+                            <constraint firstItem="BuK-L2-eiY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="oQV-hp-zTs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="인기 도시" id="WU8-lw-wAX"/>
                     <connections>
                         <outlet property="cityCollectionView" destination="AJm-0N-WdW" id="Vo8-fy-9OB"/>
+                        <outlet property="searchBar" destination="BuK-L2-eiY" id="eTb-XK-k85"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
