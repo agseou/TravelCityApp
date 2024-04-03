@@ -44,6 +44,7 @@
 		A07C7D392B512B65002FDDA2 /* TravelTalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07C7D372B512B65002FDDA2 /* TravelTalkTableViewCell.swift */; };
 		A07C7D3A2B512B65002FDDA2 /* TravelTalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A07C7D382B512B65002FDDA2 /* TravelTalkTableViewCell.xib */; };
 		A07C7D3C2B512C78002FDDA2 /* TravelTalk.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07C7D3B2B512C78002FDDA2 /* TravelTalk.storyboard */; };
+		A099AD292B552B0200B17B5B /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A099AD282B552B0200B17B5B /* Protocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		A07C7D372B512B65002FDDA2 /* TravelTalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTalkTableViewCell.swift; sourceTree = "<group>"; };
 		A07C7D382B512B65002FDDA2 /* TravelTalkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelTalkTableViewCell.xib; sourceTree = "<group>"; };
 		A07C7D3B2B512C78002FDDA2 /* TravelTalk.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelTalk.storyboard; sourceTree = "<group>"; };
+		A099AD282B552B0200B17B5B /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 		A04E4D202B4D32CB00F64770 /* TravelCity */ = {
 			isa = PBXGroup;
 			children = (
+				E2E17A0F2BBD2C1F00D09C55 /* Protocol */,
 				A019AA6C2B52417C008B65B6 /* Extension */,
 				A02E54012B4FD607002AA832 /* Model */,
 				A04E4D482B4D59E800F64770 /* Step3 */,
@@ -252,6 +255,14 @@
 				A019AA782B5250F1008B65B6 /* OtherChattingTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		E2E17A0F2BBD2C1F00D09C55 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A099AD282B552B0200B17B5B /* Protocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +372,7 @@
 				A04E4D242B4D32CB00F64770 /* SceneDelegate.swift in Sources */,
 				A04E4D462B4D517A00F64770 /* TravelCity2CollectionViewCell.swift in Sources */,
 				A019AA792B5250F1008B65B6 /* OtherChattingTableViewCell.swift in Sources */,
+				A099AD292B552B0200B17B5B /* Protocol.swift in Sources */,
 				A04E4D3D2B4D36CA00F64770 /* TravelCity1CollectionViewCell.swift in Sources */,
 				A04E4D4D2B4D5B7B00F64770 /* TravelCity3CollectionViewCell.swift in Sources */,
 				A019AA6E2B524189008B65B6 /* Date+Extension.swift in Sources */,
@@ -522,8 +534,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -535,6 +547,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -554,8 +567,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -567,6 +580,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

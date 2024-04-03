@@ -10,6 +10,7 @@ import UIKit
 class TravelCity3CollectionReusableView: UICollectionReusableView {
 
     @IBOutlet var citySegControl: UISegmentedControl!
+    static let identifier = "TravelCity3CollectionReusableView"
     
     override func awakeFromNib() {
         super.awakeFromNib()

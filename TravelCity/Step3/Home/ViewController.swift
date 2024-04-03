@@ -25,11 +25,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // CollectionCell의 등록
-        let xib = UINib(nibName: "TravelCity3CollectionViewCell", bundle: nil)
-        cityCollectionView.register(xib, forCellWithReuseIdentifier: "TravelCity3CollectionViewCell")
+        let xib = UINib(nibName: TravelCity3CollectionViewCell.identifier, bundle: nil)
+        cityCollectionView.register(xib, forCellWithReuseIdentifier: TravelCity3CollectionViewCell.identifier)
         // Headerl의 등록
-        let xib2 = UINib(nibName: "TravelCity3CollectionReusableView", bundle: nil)
-        cityCollectionView.register(xib2, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TravelCity3CollectionReusableView")
+        let xib2 = UINib(nibName: TravelCity3CollectionReusableView.identifier, bundle: nil)
+        cityCollectionView.register(xib2, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TravelCity3CollectionReusableView.identifier)
         
         cityCollectionView.dataSource = self
         cityCollectionView.delegate = self
@@ -100,7 +100,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TravelCity3CollectionViewCell", for: indexPath) as! TravelCity3CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TravelCity3CollectionViewCell.identifier, for: indexPath) as! TravelCity3CollectionViewCell
         
         let item = citylist[indexPath.item]
         
@@ -116,7 +116,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         //1. 스토리보드 찾기
         let sb = UIStoryboard(name: "Detail", bundle: nil)
         //2. 뷰 컨트롤러 찾기
-        let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        let vc = sb.instantiateViewController(withIdentifier: DetailViewController.identifier) as! DetailViewController
         //3. 뷰 컨트롤러 전환 : Push - Pop
         navigationController?.pushViewController(vc, animated: true)
 
@@ -128,7 +128,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 extension ViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TravelCity3CollectionReusableView", for: indexPath) as! TravelCity3CollectionReusableView
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TravelCity3CollectionReusableView.identifier, for: indexPath) as! TravelCity3CollectionReusableView
         header.citySegControl.addTarget(self, action: #selector(returnSegIdx), for: .valueChanged)
         
         return header
@@ -148,23 +148,19 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         
         print(selectedIDX)
         
+        //Enum 쓰기로 개선!!!
         switch selectedIDX {
         case 0: citylist = originalList
-            
         case 1: citylist = originalList.filter({ City in
             return City.domestic_travel
         })
-            
         case 2: citylist = originalList.filter({ City in
             return !City.domestic_travel
         })
-            
         default:
             citylist = originalList
             break
         }
-        
-        cityCollectionView.reloadData()
     }
     
 }

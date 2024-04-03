@@ -9,7 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    let travelList = TravelInfo()
+    let travelList = TravelInfo.travel
     
     @IBOutlet var cityDetailTableView: UITableView!
     
@@ -34,7 +34,7 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return travelList.travel.count
+        return travelList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,7 +46,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: DetailTableViewCell.identifier, for: indexPath) as! DetailTableViewCell
             
-            let item = travelList.travel[indexPath.row]
+            let item = travelList[indexPath.row]
             
             cell.setDataCell(data: item)
             

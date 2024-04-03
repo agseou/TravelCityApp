@@ -9,8 +9,6 @@ import UIKit
 
 class ChattingViewController: UIViewController {
 
-    static let identifier = "ChattingViewController"
-    
     var chattings: ChatRoom = ChatRoom(chatroomId: 1, chatroomImage: [User.hue.profileImage], chatroomName: "도봉 멘토방")
     
     @IBOutlet var footerView: UIView!
