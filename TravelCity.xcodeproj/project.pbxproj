@@ -47,6 +47,7 @@
 		A099AD292B552B0200B17B5B /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A099AD282B552B0200B17B5B /* Protocol.swift */; };
 		E2E17A122BBD2D6500D09C55 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E2E17A112BBD2D6500D09C55 /* RxCocoa */; };
 		E2E17A142BBD2D6500D09C55 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2E17A132BBD2D6500D09C55 /* RxSwift */; };
+		E2E17A172BBD504900D09C55 /* TravelCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E17A162BBD504900D09C55 /* TravelCityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		A07C7D382B512B65002FDDA2 /* TravelTalkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelTalkTableViewCell.xib; sourceTree = "<group>"; };
 		A07C7D3B2B512C78002FDDA2 /* TravelTalk.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelTalk.storyboard; sourceTree = "<group>"; };
 		A099AD282B552B0200B17B5B /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		E2E17A162BBD504900D09C55 /* TravelCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				A02E54052B50048D002AA832 /* HeaderView */,
 				A02E54042B4FDCD4002AA832 /* Cell */,
 				A04E4D252B4D32CB00F64770 /* TravelCityViewController.swift */,
+				E2E17A162BBD504900D09C55 /* TravelCityViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				A04E4D262B4D32CB00F64770 /* TravelCityViewController.swift in Sources */,
 				A019AA752B5250E6008B65B6 /* MyChattingTableViewCell.swift in Sources */,
 				A02E53FE2B4FD473002AA832 /* ADTableViewCell.swift in Sources */,
+				E2E17A172BBD504900D09C55 /* TravelCityViewModel.swift in Sources */,
 				A04E4D222B4D32CB00F64770 /* AppDelegate.swift in Sources */,
 				A04E4D3B2B4D346000F64770 /* TravelCity1CollectionViewController.swift in Sources */,
 				A07C7D2B2B512658002FDDA2 /* ChattingViewController.swift in Sources */,

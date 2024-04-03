@@ -11,15 +11,11 @@ import RxCocoa
 
 final class TravelCityViewController: UIViewController {
     
-    let citylist = CityInfo.city
-    
-    lazy var items:BehaviorRelay<[City]>  = BehaviorRelay(value: citylist)
-    
-    @IBOutlet var searchBar: UISearchBar!
-    
     // OUTLET
+    @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var cityCollectionView: UICollectionView!
     
+    let viewModel = TravelCityViewModel()
     let disposeBag = DisposeBag()
     
     // MARK: - viewDidLoad
@@ -62,16 +58,8 @@ extension TravelCityViewController {
     
     func configureBind() {
         // 검색
-        searchBar.rx.text
-            .orEmpty
-            .map { [weak self] text -> [City] in
-                if text.isEmpty {
-                    return self!.citylist
-                } else {
-                    return (self?.citylist.filter { $0.city_english_name.contains(text) || $0.city_name.contains(text)})!
-                }
-             }
-            .bind(to: items)
+        searchBar.rx.text.orEmpty
+            .bind(to: viewModel.searchText)
             .disposed(by: disposeBag)
         
         cityCollectionView.rx.itemSelected
@@ -87,7 +75,7 @@ extension TravelCityViewController {
             .disposed(by: disposeBag)
         
         
-        items
+        viewModel.items
             .asDriver(onErrorJustReturn: [])
             .drive(cityCollectionView.rx.items(cellIdentifier: TravelCity3CollectionViewCell.identifier, cellType: TravelCity3CollectionViewCell.self)) { (row, element, cell) in
                 
@@ -96,10 +84,15 @@ extension TravelCityViewController {
             }
             .disposed(by: disposeBag)
             
-        
+       // rx로는 collectionView의 Header를 만들기 어렵습니다 ->  rx community의 존재 이유!
     }
 }
 
+
+// MARK: - Header
+// 이후 구현하자!
+// scrollView 안에
+// 1) CollectionView와 2) SegmentControl을 내장한 UIView를 두자!
 
 //extension TravelCityViewController: UICollectionViewDelegateFlowLayout {
 //    
