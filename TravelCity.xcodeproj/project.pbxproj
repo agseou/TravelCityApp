@@ -22,7 +22,7 @@
 		A02E54032B4FD616002AA832 /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02E54022B4FD616002AA832 /* TravelModel.swift */; };
 		A04E4D222B4D32CB00F64770 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E4D212B4D32CB00F64770 /* AppDelegate.swift */; };
 		A04E4D242B4D32CB00F64770 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E4D232B4D32CB00F64770 /* SceneDelegate.swift */; };
-		A04E4D262B4D32CB00F64770 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E4D252B4D32CB00F64770 /* ViewController.swift */; };
+		A04E4D262B4D32CB00F64770 /* TravelCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E4D252B4D32CB00F64770 /* TravelCityViewController.swift */; };
 		A04E4D292B4D32CB00F64770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04E4D272B4D32CB00F64770 /* Main.storyboard */; };
 		A04E4D2B2B4D32CC00F64770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04E4D2A2B4D32CC00F64770 /* Assets.xcassets */; };
 		A04E4D2E2B4D32CC00F64770 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04E4D2C2B4D32CC00F64770 /* LaunchScreen.storyboard */; };
@@ -45,6 +45,8 @@
 		A07C7D3A2B512B65002FDDA2 /* TravelTalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A07C7D382B512B65002FDDA2 /* TravelTalkTableViewCell.xib */; };
 		A07C7D3C2B512C78002FDDA2 /* TravelTalk.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07C7D3B2B512C78002FDDA2 /* TravelTalk.storyboard */; };
 		A099AD292B552B0200B17B5B /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A099AD282B552B0200B17B5B /* Protocol.swift */; };
+		E2E17A122BBD2D6500D09C55 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E2E17A112BBD2D6500D09C55 /* RxCocoa */; };
+		E2E17A142BBD2D6500D09C55 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2E17A132BBD2D6500D09C55 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +65,7 @@
 		A04E4D1E2B4D32CB00F64770 /* TravelCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A04E4D212B4D32CB00F64770 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A04E4D232B4D32CB00F64770 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A04E4D252B4D32CB00F64770 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A04E4D252B4D32CB00F64770 /* TravelCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCityViewController.swift; sourceTree = "<group>"; };
 		A04E4D282B4D32CB00F64770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A04E4D2A2B4D32CC00F64770 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A04E4D2D2B4D32CC00F64770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,7 +95,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E17A122BBD2D6500D09C55 /* RxCocoa in Frameworks */,
 				A04E4D402B4D38C400F64770 /* Kingfisher in Frameworks */,
+				E2E17A142BBD2D6500D09C55 /* RxSwift in Frameworks */,
 				A02D71F82B53BA0100B45A4C /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +139,7 @@
 			children = (
 				A02E54052B50048D002AA832 /* HeaderView */,
 				A02E54042B4FDCD4002AA832 /* Cell */,
-				A04E4D252B4D32CB00F64770 /* ViewController.swift */,
+				A04E4D252B4D32CB00F64770 /* TravelCityViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -284,6 +288,8 @@
 			packageProductDependencies = (
 				A04E4D3F2B4D38C400F64770 /* Kingfisher */,
 				A02D71F72B53BA0100B45A4C /* IQKeyboardManagerSwift */,
+				E2E17A112BBD2D6500D09C55 /* RxCocoa */,
+				E2E17A132BBD2D6500D09C55 /* RxSwift */,
 			);
 			productName = TravelCity;
 			productReference = A04E4D1E2B4D32CB00F64770 /* TravelCity.app */;
@@ -316,6 +322,7 @@
 			packageReferences = (
 				A04E4D3E2B4D38C400F64770 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				A02D71F62B53BA0100B45A4C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				E2E17A102BBD2D6500D09C55 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = A04E4D1F2B4D32CB00F64770 /* Products */;
 			projectDirPath = "";
@@ -357,7 +364,7 @@
 			files = (
 				A02E53F62B4FD2E7002AA832 /* DetailViewController.swift in Sources */,
 				A04E4D572B4D963400F64770 /* TravelCity3CollectionReusableView.swift in Sources */,
-				A04E4D262B4D32CB00F64770 /* ViewController.swift in Sources */,
+				A04E4D262B4D32CB00F64770 /* TravelCityViewController.swift in Sources */,
 				A019AA752B5250E6008B65B6 /* MyChattingTableViewCell.swift in Sources */,
 				A02E53FE2B4FD473002AA832 /* ADTableViewCell.swift in Sources */,
 				A04E4D222B4D32CB00F64770 /* AppDelegate.swift in Sources */,
@@ -627,6 +634,14 @@
 				minimumVersion = 7.10.1;
 			};
 		};
+		E2E17A102BBD2D6500D09C55 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -639,6 +654,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A04E4D3E2B4D38C400F64770 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		E2E17A112BBD2D6500D09C55 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2E17A102BBD2D6500D09C55 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		E2E17A132BBD2D6500D09C55 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2E17A102BBD2D6500D09C55 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

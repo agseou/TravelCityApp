@@ -1,4 +1,5 @@
 {
+  "originHash" : "27336d26f8ec4926a8507eb6cbab821fadbdbb793eacc7e4f0ebeb491eb3051d",
   "pins" : [
     {
       "identity" : "iqkeyboardmanager",
@@ -17,7 +18,16 @@
         "revision" : "add0a87ec4e31e2ca2a0b2085f0559201e4f5918",
         "version" : "7.10.1"
       }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "state" : {
+        "revision" : "9dcaa4b333db437b0fbfaf453fad29069044a8b4",
+        "version" : "6.6.0"
+      }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
